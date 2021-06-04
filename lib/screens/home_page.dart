@@ -7,11 +7,19 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
             child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TopBar(
           title: 'Basith P',
           subtitle: 'Developer',
           color: Colors.black87,
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Text(
+          'Projects',
+          style: TextStyle(fontSize: 22),
         ),
       ],
     )));
