@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     _doInstance.options.headers['Authorization'] =
         "Client-ID ${config.unsplashKey}";
 
-    final _fetchData = await _doInstance.get('https://api.unsplash.com/');
+    final _fetchData = await _doInstance.get('https://api.unsplash.com/photos');
 
     for (var _items in _fetchData.data) {
       setState(() {
