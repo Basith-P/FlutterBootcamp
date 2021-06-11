@@ -3,5 +3,9 @@ class PhotosModel {
   final String? name;
   final String imgURL;
 
-  PhotosModel({required this.id, required this.imgURL, this.name});
+  PhotosModel({
+    required this.id,
+    required this.imgURL,
+    this.name,
+  });
 }

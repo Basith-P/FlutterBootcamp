@@ -5,20 +5,25 @@ class TopBar extends StatelessWidget {
   final String subtitle;
   final Color color;
 
-  TopBar({required this.subtitle, required this.title, required this.color});
+  TopBar({
+    required this.subtitle,
+    required this.title,
+    required this.color,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 32, horizontal: 23),
+      padding: EdgeInsets.symmetric(vertical: 44, horizontal: 23),
       width: double.infinity,
       color: color,
       child: Row(
         children: [
           CircleAvatar(
             radius: 40,
-            backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/59326665?v=4'),
+            backgroundImage: NetworkImage(
+                'https://avatars.githubusercontent.com/u/59326665?v=4'),
           ),
-          const SizedBox(width: 10,),
+          const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -29,11 +34,14 @@ class TopBar extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
-                ),
+              ),
               Text(
                 subtitle,
-                style: TextStyle(fontSize: 16, color: Colors.white),
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
                 ),
+              ),
             ],
           ),
         ],
