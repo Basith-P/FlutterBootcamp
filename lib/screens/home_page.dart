@@ -1,5 +1,3 @@
-import 'package:dio/dio.dart';
-import 'package:first_app/models/photos_model.dart';
 import 'package:first_app/screens/profile_page.dart';
 import 'package:first_app/widgets/photo_grid.dart';
 import 'package:first_app/widgets/top_bar.dart';

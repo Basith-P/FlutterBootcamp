@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ProfileScreen extends StatelessWidget {
   static const routeName = '/ProfileScreen';
   final _formKey = GlobalKey<FormState>();
-  String _name = '';
+  dynamic _name = '';
 
   void onFormSubmit() {
     _formKey.currentState!.save();

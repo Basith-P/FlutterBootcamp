@@ -1,7 +1,7 @@
 class PhotosModel {
-  final String id;
-  final String? name;
-  final String imgURL;
+  final dynamic id;
+  final dynamic name;
+  final dynamic imgURL;
 
   PhotosModel({
     required this.id,

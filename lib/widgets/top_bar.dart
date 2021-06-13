@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
-  final String title;
+  final dynamic title;
   final String subtitle;
   final Color color;
 
