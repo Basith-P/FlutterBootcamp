@@ -1,15 +1,22 @@
+import 'package:first_app/core/database/userDB.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
   static const routeName = '/ProfileScreen';
   final _formKey = GlobalKey<FormState>();
+  String _name = '';
 
   void onFormSubmit() {
-    print("atft");
+    _formKey.currentState!.save();
+    UserDB _userDB = UserDB();
+    _userDB.saveData(name: _name);
   }
 
   @override
   Widget build(BuildContext context) {
+    final _arg = ModalRoute.of(context)!.settings.arguments;
+    print(_arg);
+
     return Scaffold(
       appBar: customAppbar(context),
       body: SingleChildScrollView(
@@ -23,9 +30,11 @@ class ProfileScreen extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'Name',
                   ),
-                  onSaved: (_val) {},
+                  onSaved: (_val) {
+                    _name = _val!;
+                  },
                 ),
-                TextButton(onPressed: onFormSubmit, child: Text('Done'))
+                TextButton(onPressed: () => onFormSubmit(), child: Text('Done'))
               ],
             ),
           ),
@@ -38,10 +47,11 @@ class ProfileScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.teal,
       leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: Icon(Icons.arrow_back_ios_new)),
+        onPressed: () {
+          Navigator.of(context).pop("name result");
+        },
+        icon: Icon(Icons.arrow_back_ios_new),
+      ),
     );
   }
 }
