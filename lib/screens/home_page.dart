@@ -28,7 +28,10 @@ class _HomePageState extends State<HomePage> {
               profileTab(),
               const SizedBox(height: 20),
               Text('  Projects',
-                  style: TextStyle(fontSize: 22, color: Color(0xff0B3D2E))),
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black)),
               const SizedBox(height: 10),
               PhotoGrid(),
             ],
@@ -47,8 +50,8 @@ class _HomePageState extends State<HomePage> {
       valueListenable: Hive.box('profile').listenable(),
       builder: (BuildContext context, Box value, Widget? child) => TopBar(
         title: value.get('name'),
-        subtitle: 'Developer',
-        color: Colors.cyan,
+        subtitle: 'Flutter | Python\n& Web Dev',
+        color: Colors.black,
       ),
     );
   }
