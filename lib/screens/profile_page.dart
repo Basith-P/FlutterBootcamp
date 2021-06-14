@@ -45,7 +45,7 @@ class ProfileScreen extends StatelessWidget {
 
   AppBar customAppbar(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.black,
       leading: IconButton(
         onPressed: () {
           Navigator.of(context).pop("name result");

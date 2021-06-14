@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _profileEdit,
         child: Icon(Icons.edit),
+        backgroundColor: Colors.black,
       ),
     );
   }
@@ -49,7 +50,8 @@ class _HomePageState extends State<HomePage> {
     return ValueListenableBuilder(
       valueListenable: Hive.box('profile').listenable(),
       builder: (BuildContext context, Box value, Widget? child) => TopBar(
-        title: value.get('name'),
+        title: 'Basith P',
+        // title: value.get('name'),
         subtitle: 'Flutter | Python\n& Web Dev',
         color: Colors.black,
       ),
